@@ -68,7 +68,7 @@ export default function WhoIsItFor() {
     <div id="who-is-it-for" className="w-full flex flex-col items-center mt-32 relative z-10 px-4 sm:px-6">
       
       {/* Background Glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-purple-900/10 blur-[150px] rounded-full pointer-events-none -z-10"></div>
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[100vw] lg:w-[800px] h-[500px] bg-purple-900/10 blur-[150px] rounded-full pointer-events-none -z-10"></div>
 
       {/* Header */}
       <div className="flex flex-col items-center text-center z-10 w-full mb-16">

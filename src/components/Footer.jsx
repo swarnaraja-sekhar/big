@@ -3,7 +3,7 @@ import { Hexagon } from 'lucide-react';
 export default function Footer() {
   return (
     <footer className="w-full mt-32 border-t border-white/5 pt-16 pb-8 relative z-10">
-      <div className="w-full max-w-[1600px] mx-auto flex flex-col md:flex-row justify-between items-start gap-12 mb-16">
+      <div className="w-full max-w-[1600px] mx-auto flex flex-col md:flex-row justify-between items-start gap-12 mb-16 px-6">
         
         {/* Brand */}
         <div className="flex flex-col max-w-sm">
@@ -24,7 +24,7 @@ export default function Footer() {
         </div>
 
         {/* Links */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 w-full md:w-auto flex-1 md:pl-16">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 w-full md:w-auto flex-1 md:pl-16">
           <div className="flex flex-col gap-4">
             <h4 className="text-white font-bold text-sm uppercase tracking-wider mb-2">Product</h4>
             <a href="#" className="text-sm text-slate-400 hover:text-purple-400 transition-colors">Features</a>
@@ -55,9 +55,9 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="w-full max-w-[1600px] mx-auto pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div className="w-full max-w-[1600px] mx-auto pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-6 px-6 text-center sm:text-left">
         <span className="text-xs text-slate-600">© 2026 BIGlogic.ai. All rights reserved.</span>
-        <div className="flex items-center gap-6">
+        <div className="flex flex-wrap items-center justify-center sm:justify-end gap-4 sm:gap-6">
           <a href="#" className="text-xs text-slate-600 hover:text-white transition-colors">Privacy Policy</a>
           <a href="#" className="text-xs text-slate-600 hover:text-white transition-colors">Terms of Service</a>
           <a href="#" className="text-xs text-slate-600 hover:text-white transition-colors">Security</a>

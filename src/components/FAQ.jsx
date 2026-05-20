@@ -17,8 +17,7 @@ export default function FAQ() {
   return (
     <div id="faq" className="w-full flex flex-col items-center mt-32 relative z-10 max-w-4xl mx-auto">
       
-      {/* Header */}
-      <div className="flex flex-col items-center text-center w-full mb-12">
+      <div className="flex flex-col items-center text-center w-full mb-12 px-4 md:px-0">
         <div className="inline-flex items-center gap-2 border border-purple-500/30 bg-[#16122d] rounded-full px-4 py-1.5 mb-6">
           <HelpCircle className="w-3.5 h-3.5 text-purple-400" />
           <span className="text-[10px] sm:text-xs font-bold tracking-[0.2em] text-slate-200 uppercase">COMMON QUESTIONS</span>
@@ -35,8 +34,7 @@ export default function FAQ() {
         </p>
       </div>
 
-      {/* Accordion Container */}
-      <div className="w-full flex flex-col gap-3">
+      <div className="w-full flex flex-col gap-3 px-4 md:px-0">
         {faqs.map((faq) => {
           const isOpen = openId === faq.id;
 
@@ -76,7 +74,7 @@ export default function FAQ() {
               {/* Collapsible Content */}
               {isOpen && (
                 <div className="flex flex-col md:flex-row px-4 sm:px-6 pb-6 pt-2 gap-8 items-center border-t border-purple-500/10 mt-2">
-                  <p className="text-slate-400 text-sm sm:text-base leading-relaxed flex-1 pl-16">
+                  <p className="text-slate-400 text-sm sm:text-base leading-relaxed flex-1 sm:pl-16">
                     {faq.answer}
                   </p>
                   

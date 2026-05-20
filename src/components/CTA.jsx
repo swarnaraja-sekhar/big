@@ -29,18 +29,18 @@ export default function CTA() {
         
         {/* Tiny top text */}
         <span className="text-xs sm:text-sm font-bold tracking-[0.4em] text-purple-400 uppercase mb-8 drop-shadow-[0_0_8px_rgba(168,85,247,0.8)]">
-          START IN SECONDS
+          MULTIPLY YOUR WORKFORCE
         </span>
         
         {/* Main Title */}
         <h2 className="text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold text-white mb-8 leading-tight tracking-tight">
-          Ready to Finish Your<br />
-          Estimating Work <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-500 drop-shadow-[0_0_15px_rgba(168,85,247,0.5)]">Faster?</span>
+          Do the Work of <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-500 drop-shadow-[0_0_15px_rgba(168,85,247,0.5)]">10 Team Members</span><br />
+          In Seconds With BIGlogic.ai
         </h2>
         
         {/* Subtitle */}
         <p className="text-slate-300 text-lg sm:text-xl max-w-2xl font-light mb-12 leading-relaxed">
-          Join leading restoration contractors and insurance adjusters who are finishing their files in seconds with flawless AI precision. <span className="text-white font-medium">Your competitors are already speeding up.</span>
+          The window to gain an unfair advantage is closing. While you rely on slow processes, top firms are automating heavy documentation instantly. <span className="text-white font-medium">Empower one person to do the work of ten, starting today.</span>
         </p>
 
         {/* FOMO CTA Button styled properly */}

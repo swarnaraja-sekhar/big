@@ -42,7 +42,7 @@ export default function Testimonials() {
 
   return (
     <div id="testimonials" className="w-full flex flex-col items-center mt-32 relative z-10">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-purple-900/10 blur-[150px] rounded-full pointer-events-none -z-10"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100vw] lg:w-[800px] h-[400px] bg-purple-900/10 blur-[150px] rounded-full pointer-events-none -z-10"></div>
 
       <div className="flex flex-col items-center text-center z-10 w-full max-w-4xl mb-16">
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight tracking-tight">

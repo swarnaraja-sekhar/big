@@ -11,36 +11,35 @@ export default function Hero() {
   return (
     <div className="w-full flex flex-col pt-4 lg:pt-2 space-y-16 mt-[-10px]">
       {/* 2-Column Hero Area */}
-      <div className="flex flex-col lg:flex-row gap-16 lg:gap-8 items-center lg:items-start justify-between min-h-[600px] xl:pt-4">
+      <div className="flex flex-col lg:flex-row gap-16 lg:gap-8 items-center lg:items-start justify-between min-h-[600px] xl:pt-4 px-4 sm:px-6 lg:px-0">
         
         {/* Left Side: Content */}
         <div className="w-full lg:w-5/12 flex flex-col items-start z-20 relative pt-2 lg:pt-4">
           
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 border border-red-500/30 bg-red-500/10 rounded-full px-4 py-1.5 mb-7 overflow-hidden relative shadow-[0_0_15px_rgba(239,68,68,0.15)]">
+          <div className="inline-flex items-center gap-2 border border-purple-500/30 bg-purple-500/10 rounded-full px-4 py-1.5 mb-7 overflow-hidden relative shadow-[0_0_15px_rgba(168,85,247,0.15)]">
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent flex -translate-x-full animate-[shimmer_2s_infinite]"></div>
-            <Zap className="w-4 h-4 text-red-500 fill-red-500 animate-pulse" />
+            <Zap className="w-4 h-4 text-purple-400 fill-purple-400 animate-pulse" />
             <span className="text-xs font-bold text-slate-200">
-              WARNING: Slow operations are costing you <span className="text-red-400">high-value clients.</span>
+              ALERT: Competitors are automating — act now or fall behind.
             </span>
           </div>
 
           {/* Headline */}
           <h1 className="text-[2.75rem] sm:text-5xl lg:text-[3.5rem] font-bold font-orbitron text-white leading-[1.05] tracking-tight">
-            Do 10 Workers' Work
+            One person.
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-500 relative inline-block mt-3 font-orbitron">
-              With 1 Worker.
-              <br />
-              In Seconds.
-              {/* Magic underline effect */}
-              <div className="absolute -bottom-2 left-0 w-full h-1.5 bg-gradient-to-r from-purple-600 to-transparent rounded-full opacity-60"></div>
+              10 people's output
+              <div className="absolute -bottom-2 left-0 w-full h-1.5 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-full opacity-60"></div>
             </span>
+            <br />
+            Delivered in seconds — by BIGlogic.ai
           </h1>
 
-          {/* Subheadline (Hormozi / FOMO Equation) */}
-          <p className="mt-8 text-base lg:text-lg text-slate-300 max-w-[480px] leading-relaxed font-medium">
-            While your competition is bleeding cash on 10x the payroll, industry leaders are quietly automating their workflows. Transform <strong className="text-white">ONE</strong> team member into an unstoppable force. Execute approvals, process claims, and finalize paperwork instantly—<strong className="text-white">before your rivals even wake up.</strong>
+          {/* Subheadline (FOMO) */}
+          <p className="mt-8 text-base lg:text-lg text-slate-300 max-w-[560px] leading-relaxed font-medium">
+            While you wait on manual tasks, competitors are closing deals. Give one person the power of ten — automate estimates, approvals, and reports in seconds and never lose another client to speed.
           </p>
 
           {/* 3 Mini Features Grid */}
@@ -94,30 +93,28 @@ export default function Hero() {
               ))}
             </div>
             <p className="text-xs text-slate-400 max-w-[200px] font-medium leading-relaxed">
-              <span className="text-red-400 font-bold">Over 1,200+ teams</span> are already crushing their competition with BIGlogic.ai.
+              <span className="text-purple-400 font-bold">Over 1,200+ teams</span> are already crushing their competition with BIGlogic.ai.
             </p>
           </div>
 
         </div>
 
         {/* Right Side: Visual Dashboard UI representation with floating element overlays */}
-        <div className="w-full lg:w-7/12 relative flex items-center justify-center lg:justify-end mt-12 lg:mt-4 xl:-mt-4" style={{ perspective: '2200px' }}>
+        <div className="w-full lg:w-7/12 relative flex items-center justify-center lg:justify-end mt-12 lg:mt-4 xl:-mt-4 perspective-[2200px] overflow-visible">
           
-          <div className="glow-bg mix-blend-screen opacity-60" style={{ transform: 'translate(-30%, -50%) scale(0.8)' }}></div>
+          <div className="glow-bg mix-blend-screen opacity-60 hidden sm:block" style={{ transform: 'translate(-30%, -50%) scale(0.8)' }}></div>
 
           {/* Wrapper for perspective transform */}
-          <div className="relative w-full max-w-[960px] h-[660px] duration-700 ease-out z-10 transition-all cursor-default" 
+          <div className="relative w-full h-auto duration-700 ease-out z-10 transition-all cursor-default lg:origin-right lg:[transform:rotateY(-12deg)_rotateX(4deg)]" 
                style={{ 
-                 transform: 'rotateY(-12deg) rotateX(4deg) scale(0.85)', 
-                 transformOrigin: 'center center',
                  boxShadow: '-20px 40px 100px rgba(0,0,0,0.5), 0 0 40px rgba(168,85,247,0.1)'
                }}>
             
             {/* Main Dashboard Panel */}
-            <div className="absolute inset-0 bg-panel border gap-4 border-panel-border rounded-xl flex overflow-hidden">
+            <div className="bg-[#0a0a0f] border border-white/10 rounded-xl flex flex-col lg:flex-row overflow-hidden w-full lg:h-[660px]">
               
               {/* Sidebar mock */}
-            <div className="w-52 bg-[#0a0a0f] border-r border-panel-border flex flex-col py-4 overflow-y-auto scrollbar-hide shrink-0 z-20">
+            <div className="hidden lg:flex w-52 bg-[#0a0a0f] border-r border-[#1a1a24] flex-col py-4 overflow-y-auto scrollbar-hide shrink-0 z-20">
               <div className="px-4 mb-6 flex items-center gap-2">
                 <div className="relative flex items-center justify-center w-6 h-6 rounded-md bg-gradient-to-br from-purple-600 to-purple-900 group-hover:shadow-[0_0_15px_rgba(168,85,247,0.5)] transition-all">
                   <Hexagon className="text-white w-3.5 h-3.5 fill-white" />
@@ -196,14 +193,14 @@ export default function Hero() {
             </div>
 
             {/* Main Content Area Mock */}
-            <div className="flex-1 p-4 lg:p-5 relative flex flex-col overflow-hidden bg-[#0c0c12]">
+            <div className="flex-1 p-3 sm:p-4 lg:p-5 relative flex flex-col overflow-y-auto lg:overflow-hidden bg-[#0c0c12]">
               {/* Header */}
-              <div className="flex justify-between items-start mb-4">
+              <div className="flex flex-col sm:flex-row justify-between items-start gap-4 mb-4">
                 <div>
-                  <h3 className="text-white text-base lg:text-lg font-semibold tracking-tight">Welcome back, Alex! 👋</h3>
-                  <p className="text-slate-400 text-[10px] mt-0.5">Here's how your team is moving faster today.</p>
+                  <h3 className="text-white text-lg sm:text-base lg:text-lg font-semibold tracking-tight">Welcome back, Alex! 👋</h3>
+                  <p className="text-slate-400 text-xs sm:text-[10px] mt-0.5">Here's how your team is moving faster today.</p>
                 </div>
-                <div className="flex items-center gap-3">
+                <div className="hidden sm:flex items-center gap-3">
                   <div className="flex items-center gap-2 px-2.5 py-1.5 rounded-md bg-[#161622] border border-white/5 text-[9px] text-slate-300">
                     <CalendarDays className="w-3 h-3 text-slate-400" /> May 12 - May 18, 2025 &or;
                   </div>
@@ -218,53 +215,57 @@ export default function Hero() {
               </div>
 
               {/* Sub-banner */}
-              <div className="text-[8px] font-bold text-indigo-400 tracking-widest mb-2 flex items-center gap-1">
+              <div className="text-[10px] sm:text-[8px] font-bold text-indigo-400 tracking-widest mb-2 flex items-center gap-1">
                 <span className="text-purple-500">&rsaquo;</span> WORK FASTER. CLOSE FASTER. GET PAID FASTER.
               </div>
 
-              {/* 4 Metric Cards */}
-              <div className="grid grid-cols-4 gap-3 mb-4">
+              {/* Metric Cards - 2 on mobile, 4 on desktop */}
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-4">
                 {[
                   { title: 'Estimate Processing', sub: 'From upload to ready', t1: '3 Hours', t2: '30 Sec', p: '95% Faster', c: 'text-purple-400', b: 'border-purple-500/20', bg: 'from-purple-500/10' },
                   { title: 'Document Validation', sub: 'Verify & extract data', t1: '45 Min', t2: 'Instant', p: '98% Faster', c: 'text-orange-400', b: 'border-orange-500/20', bg: 'from-orange-500/10' },
                   { title: 'Meeting Summaries', sub: 'Notes to action items', t1: '1 Hour', t2: 'Automatic', p: '90% Faster', c: 'text-green-400', b: 'border-green-500/20', bg: 'from-green-500/10' },
                   { title: 'Approval Tracking', sub: 'From request to approval', t1: '2 Days', t2: 'Real-time', p: '85% Faster', c: 'text-blue-400', b: 'border-blue-500/20', bg: 'from-blue-500/10' },
                 ].map((m, i) => (
-                  <div key={i} className={`bg-[#12121a] rounded-lg p-2.5 border border-white/5 relative overflow-hidden`}>
+                  <div key={i} className={`bg-[#12121a] rounded-lg p-2.5 lg:p-2.5 border border-white/5 relative overflow-hidden flex flex-col justify-between`}>
                     <div className={`absolute top-0 left-0 w-full h-full bg-gradient-to-br ${m.bg} to-transparent opacity-20 pointer-events-none`}></div>
-                    <h4 className="text-[10px] font-semibold text-white mb-0.5">{m.title}</h4>
-                    <p className="text-[8px] text-slate-500 mb-2">{m.sub}</p>
-                    <div className="flex items-center justify-between mb-2">
-                      <div className="flex flex-col">
-                        <span className="text-[11px] font-semibold text-slate-300">{m.t1}</span>
-                        <span className="text-[7px] text-slate-500">Without BIGlogic</span>
-                      </div>
-                      <span className="text-slate-600 text-[10px] tracking-widest">&raquo;&rsaquo;</span>
-                      <div className="flex flex-col text-right">
-                        <span className={`text-[11px] font-semibold ${m.c}`}>{m.t2}</span>
-                        <span className="text-[7px] text-slate-500">With BIGlogic</span>
-                      </div>
+                    <div>
+                      <h4 className="text-xs lg:text-[10px] font-semibold text-white mb-0.5">{m.title}</h4>
+                      <p className="text-[10px] lg:text-[8px] text-slate-500 mb-2">{m.sub}</p>
                     </div>
-                    <div className="flex items-center gap-1 text-[8px]">
-                      <Zap className={`w-2.5 h-2.5 ${m.c} fill-current`} />
-                      <span className={m.c}>{m.p}</span>
+                    <div className="flex flex-col gap-1.5 mt-auto">
+                      <div className="flex items-center justify-between">
+                        <div className="flex flex-col">
+                          <span className="text-xs lg:text-[11px] font-semibold text-slate-300">{m.t1}</span>
+                          <span className="text-[9px] lg:text-[7px] text-slate-500">Without BIGlogic</span>
+                        </div>
+                        <span className="text-slate-600 text-xs lg:text-[10px] tracking-widest">&raquo;&rsaquo;</span>
+                        <div className="flex flex-col text-right">
+                          <span className={`text-xs lg:text-[11px] font-semibold ${m.c}`}>{m.t2}</span>
+                          <span className="text-[9px] lg:text-[7px] text-slate-500">With BIGlogic</span>
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-1 text-[10px] lg:text-[8px] mt-1 lg:mt-0">
+                        <Zap className={`w-3 h-3 lg:w-2.5 lg:h-2.5 ${m.c} fill-current`} />
+                        <span className={`font-semibold ${m.c}`}>{m.p}</span>
+                      </div>
                     </div>
                   </div>
                 ))}
               </div>
 
               {/* Main Middle Section Grid: Workflow & Active Projects on Left, Extra boxes on right */}
-              <div className="grid grid-cols-12 gap-3 flex-1 min-h-[0]">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-3 flex-1 min-h-[0]">
                 {/* Left Column (Span 7) */}
-                <div className="col-span-7 flex flex-col gap-3">
+                <div className="lg:col-span-7 flex flex-col gap-3 min-w-0">
                   
                   {/* Reconstruction Workflow */}
-                  <div className="bg-[#12121a] border border-white/5 rounded-lg p-3">
-                    <div className="flex items-center gap-2 mb-3">
+                  <div className="bg-[#12121a] border border-white/5 rounded-lg p-3 overflow-x-auto scrollbar-hide">
+                    <div className="flex items-center gap-2 mb-3 min-w-[450px]">
                       <h4 className="text-[9px] font-bold tracking-widest text-slate-300">RECONSTRUCTION WORKFLOW</h4>
                       <span className="text-[8px] px-1.5 py-0.5 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20">In Progress</span>
                     </div>
-                    <div className="flex items-start justify-between relative mt-1 px-2">
+                    <div className="flex items-start justify-between relative mt-1 px-2 min-w-[450px]">
                        <div className="absolute top-2.5 left-6 right-6 h-[2px] bg-slate-800 -z-10"></div>
                        <div className="absolute top-2.5 left-6 w-[60%] h-[2px] bg-purple-500 shadow-[0_0_8px_rgba(168,85,247,0.8)] -z-10"></div>
                        {[
@@ -293,15 +294,16 @@ export default function Hero() {
                       <h4 className="text-[9px] font-bold tracking-widest text-slate-300">ACTIVE PROJECTS</h4>
                       <span className="text-[8px] text-purple-400 hover:text-purple-300 cursor-pointer">View all projects &rarr;</span>
                     </div>
-                    <div className="flex flex-col gap-2">
+                    <div className="flex flex-col gap-2 overflow-x-auto scrollbar-hide">
+                      <div className="min-w-[450px]">
                        {[
                          { n: 'Ocean View Apartments', loc: 'Miami, FL', tag: 'Flood Damage', status: 'In Progress', statC: 'text-purple-400 bg-purple-400/10', prog: 68, im: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=100&h=100&fit=crop', due: 'May 24, 2025' },
                          { n: 'Sunset Villas', loc: 'Austin, TX', tag: 'Water Damage', status: 'In Progress', statC: 'text-purple-400 bg-purple-400/10', prog: 42, im: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=100&h=100&fit=crop', due: 'May 28, 2025' },
                          { n: 'Maplewood Townhomes', loc: 'Dallas, TX', tag: 'Storm Damage', status: 'Planning', statC: 'text-blue-400 bg-blue-400/10', prog: 25, im: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=100&h=100&fit=crop', due: 'Jun 02, 2025' },
                          { n: 'Riverside Condos', loc: 'Tampa, FL', tag: 'Fire Damage', status: 'Review', statC: 'text-orange-400 bg-orange-400/10', prog: 90, im: 'https://images.unsplash.com/photo-1583847268964-b28ce8fba321?w=100&h=100&fit=crop', due: 'May 20, 2025' }
                        ].map((proj, i) => (
-                         <div key={i} className="flex items-center justify-between p-1.5 hover:bg-white/[0.02] rounded-lg transition-colors border-b border-white/5 last:border-0 pb-2">
-                           <div className="flex gap-2.5 items-center w-5/12">
+                         <div key={i} className="flex items-center justify-between p-1.5 hover:bg-white/[0.02] rounded-lg transition-colors border-b border-white/5 last:border-0 pb-2 w-full">
+                           <div className="flex gap-2.5 items-center w-4/12">
                              <img src={proj.im} alt="prop" className="w-8 h-8 rounded shrink-0 object-cover border border-white/10" />
                              <div className="flex flex-col">
                                <span className="text-[10px] text-white font-medium truncate">{proj.n}</span>
@@ -320,21 +322,22 @@ export default function Hero() {
                                {[1,2,3].map(avatar => <img key={avatar} src={`https://i.pravatar.cc/100?img=${i*3 + avatar + 20}`} className="w-4 h-4 rounded-full border border-[#12121a] object-cover shrink-0" alt="u"/>)}
                              </div>
                            </div>
-                           <div className="w-[15%] flex flex-col items-end">
+                           <div className="w-[16%] flex flex-col items-end">
                              <span className="text-[7px] text-slate-500">Due Date</span>
                              <span className="text-[8px] text-slate-300">{proj.due}</span>
                            </div>
                          </div>
                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
 
                 {/* Right Column (Span 5) */}
-                <div className="col-span-5 flex flex-col gap-3">
+                <div className="lg:col-span-5 flex flex-col gap-3">
                   
                   {/* Row of Impact / Live Activity */}
-                  <div className="grid grid-cols-2 gap-3 h-[140px]">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:h-[140px]">
                      {/* Impact */}
                      <div className="bg-[#12121a] border border-white/5 rounded-lg p-3 relative overflow-hidden">
                        <h4 className="text-[9px] font-bold tracking-widest text-slate-300 mb-2">TODAY'S IMPACT</h4>
@@ -388,7 +391,7 @@ export default function Hero() {
                   </div>
 
                   {/* Row of Documents / Team */}
-                  <div className="grid grid-cols-2 gap-3 flex-1 min-h-[0]">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 flex-1 min-h-[0]">
                      {/* Recent Documents */}
                      <div className="bg-[#12121a] border border-white/5 rounded-lg p-3">
                        <div className="flex justify-between items-center mb-2">
@@ -444,10 +447,10 @@ export default function Hero() {
 
               {/* Bottom "Everything you need" Banner */}
               <div className="mt-3 bg-[#161622] rounded-lg border border-purple-500/20 p-3 mb-1">
-                <h4 className="text-[8px] font-bold tracking-widest text-slate-400 mb-2">EVERYTHING YOU NEED. ALL IN ONE PLACE.</h4>
-                <div className="grid grid-cols-4 gap-3">
+                <h4 className="text-[10px] lg:text-[8px] font-bold tracking-widest text-slate-400 mb-2">EVERYTHING YOU NEED. ALL IN ONE PLACE.</h4>
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
                   {[
-                    { t: 'Smart Estimates', d: 'Upload, extract, and organize estimates in seconds.', i: <FileText className="w-3 h-3 text-purple-400" /> },
+                    { t: 'Smart Estimates', d: 'Upload, extract, and organize estimates in seconds.', i: <FileText className="w-4 h-4 lg:w-3 lg:h-3 text-purple-400" /> },
                     { t: 'Communication Hub', d: 'Centralize messages, updates, and decisions.', i: <MessageSquare className="w-3 h-3 text-blue-400" /> },
                     { t: 'AI Meeting Notes', d: 'Auto-generate summaries from any meeting.', i: <Folder className="w-3 h-3 text-green-400" /> },
                     { t: 'Compliance Check', d: 'Auto-verify compliance on every project.', i: <ShieldCheck className="w-3 h-3 text-orange-400" /> },
@@ -464,7 +467,7 @@ export default function Hero() {
             </div>
             
             {/* Overlay Bar directly on top of dashboard bottom (WITHOUT / WITH logic) */}
-            <div className="absolute -bottom-4 right-8 w-[92%] h-14 bg-[#0a0a0f] border border-white/10 rounded-xl shadow-2xl flex items-center z-50 transform translate-y-6 overflow-hidden">
+            <div className="hidden lg:flex absolute -bottom-4 right-8 w-[92%] h-14 bg-[#0a0a0f] border border-white/10 rounded-xl shadow-2xl items-center z-50 transform translate-y-6 overflow-hidden">
               <div className="w-[45%] h-full bg-[#160a0a] flex items-center justify-around px-4 border-r border-red-500/20">
                 <div className="absolute left-2 top-1 text-[7px] font-bold text-red-500/50">WITHOUT BIGLOGIC</div>
                 {[
@@ -498,7 +501,7 @@ export default function Hero() {
             {/* FLOATING CARDS - Shifted into the 3D transformed wrapper to align perfectly */}
             
             {/* Top Left Float */}
-            <div className="absolute -top-6 -left-6 z-20 bg-[#161622] border border-white/10 p-3 rounded-xl shadow-[0_15px_30px_rgba(0,0,0,0.5)] flex items-start gap-3 backdrop-blur-xl max-w-[220px] transform hover:-translate-y-2 transition-transform cursor-default">
+            <div className="hidden lg:flex absolute -top-6 -left-6 z-20 bg-[#161622] border border-white/10 p-3 rounded-xl shadow-[0_15px_30px_rgba(0,0,0,0.5)] items-start gap-3 backdrop-blur-xl max-w-[220px] transform hover:-translate-y-2 transition-transform cursor-default">
               <div className="w-8 h-8 rounded-full bg-green-500/20 border border-green-500/30 flex items-center justify-center shrink-0 mt-0.5">
                 <CheckCircle2 className="w-4 h-4 text-green-400" />
               </div>
@@ -510,7 +513,7 @@ export default function Hero() {
             </div>
 
             {/* Top Right Float */}
-            <div className="absolute top-10 -right-10 z-20 bg-[#161622] border border-white/10 p-3 rounded-xl shadow-[0_15px_30px_rgba(0,0,0,0.5)] flex items-start gap-3 backdrop-blur-xl max-w-[200px] transform hover:-translate-y-2 transition-transform cursor-default">
+            <div className="hidden lg:flex absolute top-10 -right-10 z-20 bg-[#161622] border border-white/10 p-3 rounded-xl shadow-[0_15px_30px_rgba(0,0,0,0.5)] items-start gap-3 backdrop-blur-xl max-w-[200px] transform hover:-translate-y-2 transition-transform cursor-default">
                <div className="w-8 h-8 rounded-full bg-purple-500/20 border border-purple-500/30 flex items-center justify-center shrink-0 mt-0.5">
                 <Folder className="w-4 h-4 text-purple-400" />
               </div>
@@ -522,7 +525,7 @@ export default function Hero() {
             </div>
 
             {/* Bottom Left Float */}
-            <div className="absolute bottom-16 -left-12 z-20 bg-[#161622] border border-white/10 p-3 rounded-xl shadow-[0_15px_30px_rgba(0,0,0,0.5)] flex items-start gap-3 backdrop-blur-xl max-w-[220px] transform hover:-translate-y-2 transition-transform cursor-default">
+            <div className="hidden lg:flex absolute bottom-16 -left-12 z-20 bg-[#161622] border border-white/10 p-3 rounded-xl shadow-[0_15px_30px_rgba(0,0,0,0.5)] items-start gap-3 backdrop-blur-xl max-w-[220px] transform hover:-translate-y-2 transition-transform cursor-default">
               <div className="w-8 h-8 rounded-full bg-green-500/20 border border-green-500/30 flex items-center justify-center shrink-0 mt-0.5">
                 <CheckCircle2 className="w-4 h-4 text-green-400" />
               </div>
@@ -534,7 +537,7 @@ export default function Hero() {
             </div>
 
             {/* Bottom Right Float */}
-            <div className="absolute -bottom-8 right-8 z-20 bg-[#161622] border border-white/10 p-3 rounded-xl shadow-[0_30px_60px_rgba(0,0,0,0.6)] flex items-start gap-3 backdrop-blur-xl max-w-[200px] transform hover:-translate-y-2 transition-transform cursor-default">
+            <div className="hidden lg:flex absolute -bottom-8 right-8 z-20 bg-[#161622] border border-white/10 p-3 rounded-xl shadow-[0_30px_60px_rgba(0,0,0,0.6)] items-start gap-3 backdrop-blur-xl max-w-[200px] transform hover:-translate-y-2 transition-transform cursor-default">
                <div className="w-8 h-8 rounded-full bg-blue-500/20 border border-blue-500/30 flex items-center justify-center shrink-0 mt-0.5">
                 <CheckCircle2 className="w-4 h-4 text-blue-400" />
               </div>

@@ -9,11 +9,11 @@ export default function Features() {
     <div id="features" className="w-full flex flex-col items-center mt-32 relative z-10">
       
       {/* Background Glow */}
-      <div className="absolute top-20 right-10 w-96 h-96 bg-purple-900/10 blur-[120px] rounded-full pointer-events-none -z-10"></div>
-      <div className="absolute bottom-40 left-10 w-96 h-96 bg-indigo-900/10 blur-[120px] rounded-full pointer-events-none -z-10"></div>
+      <div className="absolute top-20 right-0 md:right-10 w-64 md:w-96 h-64 md:h-96 bg-purple-900/10 blur-[120px] rounded-full pointer-events-none -z-10"></div>
+      <div className="absolute bottom-40 left-0 md:left-10 w-64 md:w-96 h-64 md:h-96 bg-indigo-900/10 blur-[120px] rounded-full pointer-events-none -z-10"></div>
 
       {/* Header & Top Right Activity Feed */}
-      <div className="w-full flex flex-col xl:flex-row justify-between items-start gap-10 mb-12">
+      <div className="w-full flex flex-col xl:flex-row justify-between items-start gap-10 mb-12 px-4 md:px-0">
         <div className="flex flex-col items-start w-full xl:w-2/3">
           <div className="inline-flex items-center gap-2 border border-purple-500/30 bg-[#16122d] rounded-full px-4 py-1.5 mb-6 shadow-[0_0_15px_rgba(168,85,247,0.15)]">
             <Rocket className="w-3.5 h-3.5 text-purple-400 fill-purple-400" />
@@ -56,7 +56,7 @@ export default function Features() {
       </div>
 
       {/* Grid Row 1 (Two Large Cards) */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full mb-6 relative">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full mb-6 relative px-4 md:px-0">
          
          {/* Smart Estimate Processing */}
          <div className="bg-[#0b0a11] border border-purple-500/20 rounded-3xl p-8 relative overflow-hidden flex flex-col group min-h-[440px]">

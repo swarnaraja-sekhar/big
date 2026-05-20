@@ -10,7 +10,7 @@ export default function HowItWorks() {
     <div id="how-it-works" className="w-full flex flex-col mt-40 relative z-10">
       
       {/* Top Header Section */}
-      <div className="flex flex-col lg:flex-row justify-between items-start gap-10 w-full mb-16">
+      <div className="flex flex-col lg:flex-row justify-between items-start gap-10 w-full mb-16 px-4 md:px-0">
         
         {/* Left Side: Headlines */}
         <div className="flex flex-col w-full lg:w-3/5">
@@ -248,7 +248,7 @@ export default function HowItWorks() {
       </div>
 
       {/* Info Strip (5 Icons) */}
-      <div className="w-full bg-[#11111a] border border-white/5 rounded-2xl p-6 mt-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 relative z-10">
+      <div className="w-full bg-[#11111a] border border-white/5 rounded-2xl p-6 mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 relative z-10 mx-4 md:mx-0 w-[calc(100%-2rem)] md:w-full box-border">
          {[
            { i: <Clock className="w-6 h-6 text-indigo-400"/>, t: 'Real-time visibility', d: "Know what's happening, before anyone asks." },
            { i: <Bell className="w-6 h-6 text-purple-400"/>, t: 'Automatic notifications', d: "The right updates to the right people—instantly." },
@@ -267,7 +267,7 @@ export default function HowItWorks() {
       </div>
 
       {/* Bottom Rocket/Metrics Banner */}
-      <div className="w-full bg-gradient-to-r from-[#12101e] via-[#100f18] to-[#141220] border border-white/10 rounded-2xl p-6 lg:p-8 mt-6 flex flex-col lg:flex-row items-center justify-between gap-8 relative overflow-hidden z-10 shadow-2xl">
+      <div className="w-full bg-gradient-to-r from-[#12101e] via-[#100f18] to-[#141220] border border-white/10 rounded-2xl p-6 lg:p-8 mt-6 flex flex-col lg:flex-row items-center justify-between gap-8 relative overflow-hidden z-10 shadow-2xl mx-4 md:mx-0 w-[calc(100%-2rem)] md:w-full box-border">
          {/* Background ambient glow */}
          <div className="absolute top-1/2 left-0 -translate-y-1/2 w-64 h-64 bg-purple-600/10 blur-[80px] rounded-full pointer-events-none"></div>
 

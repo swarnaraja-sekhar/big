@@ -5,7 +5,7 @@ export default function Security() {
     <div id="security" className="w-full flex flex-col items-center mt-32 relative z-10">
       
       {/* Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-blue-900/10 blur-[130px] rounded-full pointer-events-none -z-10"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 w-[100vw] lg:w-[800px] h-[300px] bg-blue-900/10 blur-[130px] rounded-full pointer-events-none -z-10"></div>
 
       <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20 w-full">
         

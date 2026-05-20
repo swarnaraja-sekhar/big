@@ -11,10 +11,10 @@ export default function Transformation() {
     <div id="transformation" className="w-full flex flex-col items-center mt-32 relative z-10">
       
       {/* Ambient background glow */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-purple-900/10 blur-[150px] rounded-full pointer-events-none"></div>
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[100vw] lg:w-[800px] h-[400px] bg-purple-900/10 blur-[150px] rounded-full pointer-events-none"></div>
 
       {/* Header */}
-      <div className="flex flex-col items-center text-center z-10 w-full max-w-4xl">
+      <div className="flex flex-col items-center text-center z-10 w-full max-w-4xl px-4 md:px-0">
         <div className="inline-flex items-center gap-2 border border-purple-500/30 bg-purple-500/10 rounded-full px-4 py-1.5 mb-6">
           <Sparkles className="w-3.5 h-3.5 text-purple-400" />
           <span className="text-xs font-bold tracking-widest text-slate-200 uppercase">THE TRANSFORMATION</span>
@@ -39,7 +39,7 @@ export default function Transformation() {
           <span className="font-black text-xl text-white italic">VS</span>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 relative">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 relative px-4 sm:px-0">
           
           {/* LEFT: Without BIGlogic */}
           <div className="bg-[#110d16] border border-red-500/20 rounded-3xl p-8 lg:p-10 relative overflow-hidden shadow-[0_0_50px_rgba(239,68,68,0.03)]">
@@ -59,9 +59,9 @@ export default function Transformation() {
             </div>
 
             {/* Inner Content Grid */}
-            <div className="grid grid-cols-5 gap-6 h-full relative z-10">
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-6 h-full relative z-10">
               {/* Feature Cards (3 columns) */}
-              <div className="col-span-3 flex flex-col gap-3">
+              <div className="md:col-span-3 flex flex-col gap-3">
                 {[
                   { i: <FileText/>, t: 'Manual paperwork', d: 'Hours spent on repetitive work' },
                   { i: <Clock/>, t: 'Delayed approvals', d: 'Projects stall waiting for updates' },
@@ -83,9 +83,9 @@ export default function Transformation() {
               </div>
               
               {/* Timeline (2 columns) */}
-              <div className="col-span-2 relative pl-6 flex flex-col justify-center">
+              <div className="md:col-span-2 relative md:pl-6 flex flex-col justify-center mt-8 md:mt-0">
                 {/* Connecting Line */}
-                <div className="absolute left-[38px] top-6 bottom-12 w-[1px] border-l border-dashed border-red-500/30"></div>
+                <div className="absolute left-[38px] top-6 bottom-12 w-[1px] border-l border-dashed border-red-500/30 hidden md:block"></div>
                 
                 <div className="flex flex-col gap-8 w-full relative">
                   
@@ -104,8 +104,8 @@ export default function Transformation() {
                   </div>
 
                   {/* Node 2 */}
-                  <div className="flex items-start gap-4 relative z-10 w-[115%] -ml-[15%]">
-                    <div className="absolute top-1/2 right-[100%] w-6 h-[1px] border-t border-dashed border-red-500/30"></div>
+                  <div className="flex items-start gap-4 relative z-10 w-full md:w-[115%] md:-ml-[15%]">
+                    <div className="absolute top-1/2 right-[100%] w-6 h-[1px] border-t border-dashed border-red-500/30 hidden md:block"></div>
                     <div className="flex justify-start w-full">
                       <div className="w-6 h-6 rounded-full bg-[#1c1216] border border-red-500/30 flex items-center justify-center shrink-0 mt-1 mr-4">
                         <MessageSquare className="w-3 h-3 text-red-400" />
@@ -118,7 +118,7 @@ export default function Transformation() {
                   </div>
 
                   {/* Node 3 */}
-                  <div className="flex items-start gap-4 relative z-10 -ml-4">
+                  <div className="flex items-start gap-4 relative z-10 md:-ml-4">
                      <div className="w-6 h-6 rounded-full bg-red-500/20 border border-red-500 flex items-center justify-center shrink-0 mt-1 shadow-[0_0_10px_rgba(239,68,68,0.4)]">
                       <MessageCircle className="w-3 h-3 text-red-400" />
                     </div>
@@ -129,8 +129,8 @@ export default function Transformation() {
                   </div>
 
                   {/* Node 4 */}
-                  <div className="flex items-start gap-4 relative z-10 ml-6">
-                    <div className="absolute top-1/2 right-[100%] w-6 h-[1px] border-t border-dashed border-red-500/30"></div>
+                  <div className="flex items-start gap-4 relative z-10 md:ml-6">
+                    <div className="absolute top-1/2 right-[100%] w-6 h-[1px] border-t border-dashed border-red-500/30 hidden md:block"></div>
                     <div className="w-6 h-6 rounded-full bg-[#1c1216] border border-red-500/30 flex items-center justify-center shrink-0 mt-1">
                       <FileText className="w-3 h-3 text-red-400" />
                     </div>
@@ -174,9 +174,9 @@ export default function Transformation() {
             </div>
 
             {/* Inner Content Grid */}
-            <div className="grid grid-cols-5 gap-6 h-full relative z-10">
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-6 h-full relative z-10">
               {/* Feature Cards (3 columns) */}
-              <div className="col-span-3 flex flex-col gap-3">
+              <div className="md:col-span-3 flex flex-col gap-3">
                 {[
                   { i: <Monitor/>, t: 'Live project visibility', d: 'Everything in real-time' },
                   { i: <Zap/>, t: 'Faster approvals', d: 'Auto-routing & notifications' },
@@ -198,9 +198,9 @@ export default function Transformation() {
               </div>
               
               {/* Timeline (2 columns) */}
-              <div className="col-span-2 relative pl-6 flex flex-col justify-center">
+              <div className="md:col-span-2 relative md:pl-6 flex flex-col justify-center mt-8 md:mt-0">
                 {/* Connecting Line */}
-                <div className="absolute left-[35.5px] top-6 bottom-8 w-1 bg-gradient-to-b from-indigo-500 via-blue-500 to-green-500 rounded-full shadow-[0_0_10px_rgba(59,130,246,0.5)]"></div>
+                <div className="absolute left-[35.5px] top-6 bottom-8 w-1 bg-gradient-to-b from-indigo-500 via-blue-500 to-green-500 rounded-full shadow-[0_0_10px_rgba(59,130,246,0.5)] hidden md:block"></div>
                 
                 <div className="flex flex-col gap-8 w-full relative">
                   
@@ -295,7 +295,7 @@ export default function Transformation() {
       </div>
 
       {/* Metrics Row */}
-      <div className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mt-8 z-10">
+      <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8 z-10 px-4 md:px-0">
         {[
           { i: <Rocket/>, v: '3X', t: 'Faster Coordination', d: 'Projects move 3x faster from start to finish.', bg: 'bg-indigo-500/10', c: 'text-indigo-400' },
           { i: <Zap/>, v: '90%', t: 'Less Manual Work', d: 'Automate repetitive tasks and reduce busywork.', bg: 'bg-purple-500/10', c: 'text-purple-400' },
@@ -324,7 +324,6 @@ export default function Transformation() {
           modern reconstruction companies are <span className="text-purple-400 font-bold">already operating like this.</span>
         </p>
       </div>
-
     </div>
   );
 }
