@@ -15,7 +15,7 @@ export default function Navbar() {
   }, [isDark]);
 
   return (
-    <nav className="w-full py-6 flex items-center justify-between border-b border-white/5">
+    <nav className="sticky top-0 z-50 w-full py-5 flex items-center justify-between border-b border-white/5 bg-[#0b0a10]/80 backdrop-blur-lg">
       {/* Logo */}
       <div className="flex items-center gap-2 cursor-pointer group">
         <div className="relative flex items-center justify-center w-8 h-8 rounded-lg bg-gradient-to-br from-purple-600 to-purple-900 group-hover:shadow-[0_0_15px_rgba(168,85,247,0.5)] transition-all">
@@ -25,20 +25,14 @@ export default function Navbar() {
       </div>
 
       {/* Center Links */}
-      <div className="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300">
-        <div className="flex items-center gap-1 cursor-pointer hover:text-white transition-colors">
-          Product <ChevronDown className="w-4 h-4 opacity-70" />
-        </div>
-        <div className="flex items-center gap-1 cursor-pointer hover:text-white transition-colors">
-          Solutions <ChevronDown className="w-4 h-4 opacity-70" />
-        </div>
-        <div className="flex items-center gap-1 cursor-pointer hover:text-white transition-colors">
-          Industries <ChevronDown className="w-4 h-4 opacity-70" />
-        </div>
-        <div className="flex items-center gap-1 cursor-pointer hover:text-white transition-colors">
-          Resources <ChevronDown className="w-4 h-4 opacity-70" />
-        </div>
-        <a href="#" className="cursor-pointer hover:text-white transition-colors">Pricing</a>
+      <div className="hidden lg:flex items-center gap-6 text-sm font-medium text-slate-300">
+        <a href="#transformation" className="cursor-pointer hover:text-white transition-colors">Transformation</a>
+        <a href="#how-it-works" className="cursor-pointer hover:text-white transition-colors">How It Works</a>
+        <a href="#features" className="cursor-pointer hover:text-white transition-colors">Features</a>
+        <a href="#who-is-it-for" className="cursor-pointer hover:text-white transition-colors">Who It's For</a>
+        <a href="#security" className="cursor-pointer hover:text-white transition-colors">Security</a>
+        <a href="#testimonials" className="cursor-pointer hover:text-white transition-colors">Clients</a>
+        <a href="#faq" className="cursor-pointer hover:text-white transition-colors">FAQ</a>
       </div>
 
       {/* Right Actions */}
