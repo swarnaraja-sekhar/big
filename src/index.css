@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #581c87;
+  --color-accent: #a855f7;
+  --color-panel: #14141d;
+  --color-panel-border: #262636;
+  --font-orbitron: "Orbitron", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* --- MAGIC LIGHT THEME INVERSION --- */
+/* By inverting the HTML & Hue Rotating 180 degrees, dark colors become light and primary colors (Purples/Oranges) stay the same hue! */
+html.light {
+  filter: invert(1) hue-rotate(180deg);
+  background-color: #0b0a10; /* Important: Provide the explicit dark color to invert so it flips to extremely light gray/white */
+}
+
+/* We must double-invert images, specific logos, and anything we don't want blown out by the filter */
+html.light img,
+html.light .lucide-hexagon,
+html.light .dashboard-avatar {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+/* Subtle grid background pattern */
+.bg-grid-pattern {
+  background-image: 
+    linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Blur glow effect behind the dashboard */
+.glow-bg {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(109, 40, 217, 0.15) 0%, rgba(10, 10, 15, 0) 70%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
