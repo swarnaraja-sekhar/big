@@ -225,8 +225,9 @@ export default function Hero() {
                       <h4 className="text-xs font-bold tracking-widest text-slate-300">RECONSTRUCTION WORKFLOW</h4>
                       <span className="text-[10px] px-2 py-0.5 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20 font-medium">In Progress</span>
                     </div>
-                      <div className="flex items-start justify-center gap-3 sm:gap-4 relative mt-2 px-4 min-w-[500px]">
-                        <div className="absolute top-3.5 left-8 right-8 h-[3px] -z-10 rounded-full bg-purple-500 shadow-[0_0_12px_rgba(168,85,247,0.7)]"></div>
+                      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-center gap-6 relative mt-2 px-4">
+                        <div className="hidden sm:block absolute top-3.5 left-8 right-8 h-[3px] -z-10 rounded-full bg-purple-500 shadow-[0_0_12px_rgba(168,85,247,0.7)]"></div>
+                        <div className="block sm:hidden absolute left-1/2 top-6 bottom-6 w-[3px] -z-10 rounded-full bg-purple-500 shadow-[0_0_12px_rgba(168,85,247,0.7)] -translate-x-1/2"></div>
                        {workflowSteps.map((step, i) => {
                            const isDone = i < activeStep;
                            const isActive = i === activeStep;
@@ -236,11 +237,11 @@ export default function Hero() {
                            const labelCls = isActive ? 'text-white' : 'text-slate-400';
 
                            return (
-                             <div key={i} className="relative flex flex-col items-center gap-2 text-center w-[88px] sm:w-[100px] flex-none">
+                             <div key={i} className="relative flex flex-col items-center gap-2 text-center w-full sm:w-[100px] flex-none sm:mx-0 mx-auto">
                                {i < workflowSteps.length - 1 && (
-                                 <div className="absolute top-4 left-[calc(50%+1.05rem)] right-[-50%] h-[3px] rounded-full bg-purple-500 shadow-[0_0_12px_rgba(168,85,247,0.75)]"></div>
+                                 <div className="hidden sm:block absolute top-4 left-[calc(50%+1.05rem)] right-[-50%] h-[3px] rounded-full bg-purple-500 shadow-[0_0_12px_rgba(168,85,247,0.75)]"></div>
                                )}
-                               <div className={`w-8 h-8 rounded-full flex items-center justify-center ${circleCls}`}>
+                               <div className={`w-8 h-8 rounded-full flex items-center justify-center ${circleCls} relative z-10`}>
                                  {step.icon}
                                </div>
                                <span className={`text-[10px] leading-tight font-medium ${labelCls}`} style={{whiteSpace: 'pre-line'}}>{step.lbl}</span>
